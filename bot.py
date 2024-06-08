@@ -14,7 +14,7 @@ auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 api = tweepy.API(auth)
 
 def fetch_liked_tweets():
-    liked_tweets = api.favorites(count=10)  # Fetch the last 10 liked tweets
+    liked_tweets = api.get_favorites(count=10)  # Fetch the last 10 liked tweets
     return liked_tweets
 
 def repost_tweet(tweet_id):
